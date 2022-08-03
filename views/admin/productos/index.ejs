@@ -1,0 +1,94 @@
+
+
+<div class="m-5 text-right">
+  <a href="/admin/productos/create" class="text-xl text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-3 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-5">Crear Producto</a>
+</div>
+
+<div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <caption class="p-5 text-2xl font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800 text-center mb-5">
+          Listado de Productos
+          <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Ingresa, modifica o elimina nuestros productos.</p>
+      </caption>
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="py-3 px-6 text-center">
+                Tipo
+              </th>
+              <th scope="col" class="text-center">
+                Imagen
+              </th>
+              <th scope="col" class="py-3 px-6 text-center">
+                  Marca
+              </th>
+              <th scope="col" class="py-3 px-6 text-center">
+                  Modelo
+              </th>
+              <th scope="col" class="py-3 px-6 text-center">
+                  Precio
+              </th>
+              <th scope="col" class="py-3 px-6 text-center">
+                Color
+              </th>
+              <th scope="col" class="py-3 px-3">
+                  <span class="sr-only">Edit</span>
+              </th>
+              <th scope="col" class="py-3 px-3">
+                <span class="sr-only">Eliminar</span>
+            </th>
+          </tr>
+      </thead>
+      <tbody>
+        <% productos.forEach(producto => { %>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                <%= producto.tipo %>
+              </th>
+              <td class="" width="100">
+                <img class="w-auto"  src="/images/producto_<%=producto.id%>.jpg" alt="">
+              </td>
+              <td class="py-4 px-6 text-center">
+                <%= producto.marca %>
+              </td>
+              <td class="py-4 px-6 text-center">
+                <%= producto.modelo %>
+              </td>
+              <td class="py-4 px-6 text-center">
+                $ <%= producto.precio %>
+              </td>
+              <td class="py-4 px-6 text-center">
+                <%= producto.color %>
+              </td>
+              <td class="py-3 px-3 text-right">
+                  <a href="productos/<%= producto.id%>/edit" class="font-medium text-blue-400 dark:text-blue-500 hover:underline">Editar</a>
+              </td>
+              <td>
+            <form action="productos/<%=producto.id%>/delete?_method=DELETE" method="post" id="form-delete" class="form-delete py-2 px-2 mr-5 text-right">
+              <button type="submit" class="bg-red-500 font-medium text-white p-3 rounded-lg">Eliminar</button>
+            </form>
+          </td>
+        </tr>  
+
+      <% }) %>
+      </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('submit', event => {
+    if (event.target.classList.contains('form-delete')) {
+      event.preventDefault();
+      if(confirm('¿Esta seguro que quiere borrar?')) {
+        event.target.submit();
+      }
+  }
+})
+</script>
+

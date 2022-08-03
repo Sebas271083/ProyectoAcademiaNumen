@@ -1,0 +1,52 @@
+    
+    <div class="flex flex-col items-end m-4">
+        <div >
+            <p class="text-center font-bold"><%= respuesta.data.name %></p>
+            <P class="text-center"><%= parseInt(respuesta.data.main.temp-273.15)  %>°C</P>  
+            <div class="flex"> 
+                <p class="mr-3 text-blue-800">Min: <%= parseInt(respuesta.data.main.temp_min-273.15)  %>°C</p> 
+                <p class="mr-3 text-red-800">Max: <%= parseInt(respuesta.data.main.temp_max-273.15)  %>°C</p> 
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+<img class=" m-3 w-full" src="/images/principal.jpg" alt="img principal">
+<div class="flex justify-around">
+    <div>
+        <figure>
+            <a href="#">
+                <img src="/images/Ahora_12_1_1_.png" alt="Tarjeta">
+            </a>
+            <figcaption class="ml-3">Financiación</figcaption>
+        </figure>
+    </div>
+    <div class="m-3">
+        <figure>
+            <a href="#">
+                <img src="/images/imagen_y_sonido_4.png" alt="Imagen y sonido">
+            </a>
+            <figcaption class="ml-3">Imagen y Sonido</figcaption>
+        </figure>
+    </div>
+    <div class="m-3">
+        <figure>
+            <a href="#">
+                <img src="/images/peque_os_electro.png" alt="Electrodomesticos">
+            </a>
+            <figcaption class="ml-3">Electrodomesticos</figcaption>
+        </figure>
+    </div>
+    <div class="m-3">
+        <figure>
+            <a href="">
+                <img src="/images/climatizacion_1.png" alt="Climatizacion" title="Climatizacion">
+            </a>
+            <figcaption>Climatizacion</figcaption>
+        </figure>
+        
+    </div>
+</div>

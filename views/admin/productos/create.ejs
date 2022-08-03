@@ -1,0 +1,74 @@
+<!-- component -->
+
+<form id="form" action="store" method="post" enctype="multipart/form-data">
+    <div class="flex h-screen bg-gray-200 items-center justify-center mt-32 mb-32">
+        <div class="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
+    
+        <div class="flex justify-center p-2">
+            <div class="flex">
+            <h1 class="text-gray-600 font-bold md:text-2xl text-xl">Introduzca el Nuevo Producto </h1>
+            </div>
+        </div>
+        
+    
+        <div class="grid grid-cols-1 mt-5 mx-7 p-2">
+            <label for="tipo" class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Tipo</label>
+            <input id="tipo" name="tipo" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Tipo" />
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7 p-2">
+            <div class="grid grid-cols-1 p-2">
+            <label for="modelo" class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Modelo</label>
+            <input id="modelo" name="modelo" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Modelo" />
+            </div>
+            <div class="grid grid-cols-1 p-2">
+                <label for="marca" class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Marca</label>
+                <select name="marca" id="marca" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                <option>Selecciona la marca</option>
+                <option>Samsung</option>
+                <option>Lg</option>
+                <option>Whirpool</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="grid grid-cols-1 mt-5 mx-7 p-2">
+
+        </div>
+    
+        <div class="grid grid-cols-1 mt-5 mx-7 p-2">
+            <label for="precio" class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio</label>
+            <input name="precio" id="precio" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Precio $" />
+        </div>
+
+        <div class="grid grid-cols-1 mt-5 mx-7 p-2">
+            <label for="color" class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Color</label>
+            <input name="color" id="color" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Color" />
+        </div>
+    
+        <div class="grid grid-cols-1 mt-5 mx-7 p-2">
+            <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold mb-1">Subir Foto</label>
+            <div class='flex items-center justify-center w-full'>
+                <label class='flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-purple-300 group'>
+                    <div class='flex flex-col items-center justify-center pt-7 mb-6'>
+                        <p class='lowercase text-sm text-gray-400 group-hover:text-purple-600 pt-1 tracking-wider'>Seleccione la imagen</p>
+                    </div>
+                    <input type='file'  / hidden id="imagen" name="imagen">
+                </label>
+            </div>
+        </div>
+    
+        <div class='flex items-center justify-center md:gap-8 gap-4 pt-5 pb-5 mt-4'>
+            <div class="">
+                <button id="reset" class='w-auto bg-gray-400 hover:bg-gray-500 rounded-lg shadow-xl font-medium text-white px-4 py-2 m-5'>Cancelar</button>
+            </div>
+           
+            <button type="submit" class='w-auto bg-blue-600 hover:bg-blue-700 rounded-lg shadow-xl font-medium text-white px-4 py-2 m-5'>Guardar</button>
+        </div>
+    
+        </div>
+    </div>
+
+</form>
+
+
