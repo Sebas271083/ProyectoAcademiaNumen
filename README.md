@@ -1,7 +1,7 @@
 # ProyectoAcademiaNumen
 Ruta Principal http://localhost:8080/api/
 
-Datos Archivo .env
+# Datos Archivo .env
 MONGO_CNN=mongodb+srv://sebas:sebas@cluster0.hzzhv.mongodb.net/test
 PORT=8080
 
